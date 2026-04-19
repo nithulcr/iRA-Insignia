@@ -122,7 +122,7 @@ header {
 }
 
 .button-site {
-    background: white;
+    background: linear-gradient(270deg, #fff, #e8e8e8);
     color: var(--main-color);
     padding: 14px 30px;
     border-radius: 30px;
@@ -142,13 +142,10 @@ header {
 
 }
 
-.button-site2 {
-    border: 1px solid white;
 
-}
 
 .button-site3 {
-    background-color: var(--main-color3);
+    background: linear-gradient(90deg, var(--main-color3), #0e2e60);
 
 }
 
@@ -207,7 +204,7 @@ header {
 
 .button-site3 span {
 
-    background: #032c72f2;
+    background: #033487f2;
 
 
 }
@@ -557,6 +554,8 @@ h1 {
     font-size: 84px;
     line-height: 80px;
     font-weight: 700;
+    max-width: 800px;
+    margin: auto;
 }
 .location-badge{
     display: flex;
@@ -1135,14 +1134,15 @@ align-items: center;
     .sticky-bar .features-column .button-site{
         padding: 18px 40px;
         min-width: 460px;
-        background: var(--main-color2);
+        background: linear-gradient(270deg, var(--main-color2), #b17c7a);
     }
     .sticky-bar .features-column .button-site h6{
        font-size: 22px!important;
        color: var(--main-color);
+       
     }
-    .sticky-bar .features-column .button-site:hover h6{
-       color:white;
+    .sticky-bar .features-column .button-site span{
+       background-color: var(--main-color2);
     }
 .features-column:not(:last-child) {
     border-right: 2px solid #0000000b;
