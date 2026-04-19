@@ -286,27 +286,6 @@ header {
 }
 
 
-.fixed-contact {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    z-index: 9999;
-    display: flex;
-    flex-direction: column;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-}
-
-
-
-.fixed-contact img {
-
-    width: 70px;
-    height: 70px;
-}
 
 .text-site-primary {
     color: var(--main-color2) !important;
@@ -353,6 +332,37 @@ section:nth-child(odd){
     background: #fffdf6;
 
 }
+/* fixed contact start */
+.fixed-contact {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.support-popup a{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  opacity: 0;
+  pointer-events: none;
+}
+.fixed-contact .support-icon {
+    width: 70px;
+    height: 70px;
+}
+.fixed-contact .support-popup img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
 /* home started */
 .home {
     position: relative;
@@ -365,9 +375,6 @@ section:nth-child(odd){
 }
 
 
-/* .site-body {
-    padding-top: 87px;
-} */
 
 .carousel-text {
     position: relative;
@@ -468,30 +475,6 @@ section:nth-child(odd){
     background: linear-gradient(269deg, rgba(0, 0, 0, 0.359), transparent);
 }
 
-/* 
-
-
-.home .carousel-inner2.overlay2:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: calc(100% - 5px);
-    background-color: #00000034;
-    z-index: 9;
-}
-
-.home .carousel-inner2.overlay3:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: calc(100% - 5px);
-    background: linear-gradient(90deg, #011a2385, #011a2348, transparent, transparent);
-    z-index: 9;
-} */
 
 .home .carousel-caption {
     position: absolute;
@@ -2544,10 +2527,6 @@ label {
         font-size: 12px;
     }
 
-    .fixed-contact {
-        top: auto;
-        transform: initial;
-    }
 
 
     .master-plan .carousel-indicators {

@@ -30,11 +30,27 @@
 </head>
 
 <body class="body">
+	<div class="fixed-contact">
 
-	<a href="https://wa.me/+918850264534" target="_blank" class="fixed-contact">
+        <img src="images/support.png" class="support-icon" alt="Message">
+        <span>Support?</span>
 
-		<img src="images/whatsapp.png" class="icon" alt="Whatsapp">
-	</a>
+        <div class="support-popup">
+             <a href="https://wa.me/+918850264534" class="support-single support1">
+
+                <img src="images/whatsapp.png" class="icon" alt="Whatsapp">
+            </a>
+            <a href="https://ig.me/m/jeta_futures" target="_blank" class="support-single support2">
+
+                <img src="images/calendy2.png" class="icon" alt="instagram">
+            </a>
+            <a href="tel:8850264534" target="_blank" class="support-single support3">
+
+                <img src="images/call.png" class="icon" alt="call">
+            </a>
+        </div>
+    </div>
+
 	<a class="download">
 		Download Brochure
 	</a>
@@ -1262,7 +1278,44 @@
 		});
 	</script>
 
+<script>
+	const button = $(".fixed-contact");
+const popupItems = $(".support-popup a");
 
+let isOpen = false;
+
+// Set initial state
+popupItems.css({
+    opacity: 0,
+    pointerEvents: "none",
+    transition: "opacity 0.2s ease"
+});
+
+$(".support1").css("transition", "transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)");
+$(".support2").css("transition", "transform 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275)");
+$(".support3").css("transition", "transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)");
+
+function openMenu() {
+    popupItems.css({ opacity: 1, pointerEvents: "auto" });
+    $(".support1").css("transform", "translate(-10px, -70px)");
+    $(".support2").css("transform", "translate(-50px, -40px)");
+    $(".support3").css("transform", "translate(-60px, 10px)");
+}
+
+function closeMenu() {
+    popupItems.css({ opacity: 0, pointerEvents: "none" });
+    $(".support1, .support2, .support3").css("transform", "translate(0px, 0px)");
+}
+
+button.on("click", function () {
+    if (!isOpen) {
+        openMenu();
+    } else {
+        closeMenu();
+    }
+    isOpen = !isOpen;
+});
+</script>
 
 </body>
 
