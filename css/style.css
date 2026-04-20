@@ -628,21 +628,12 @@ h1 {
     line-height: 1.2;
 }
 
-.about-main .about-left {
-    position: relative;
-}
 
-.about-main .about-right {
-    padding-right: 140px;
-}
 
-.about2 {
+.about {
     padding: 50px 50px 130px 50px;
 }
 
-.about2 .about-right {
-    background: initial;
-}
 
 
 .about-right-text {
@@ -650,12 +641,12 @@ h1 {
     flex-direction: column;
     gap: 10px;
 }
-.about2-row{
+.about-row{
     display: grid;
     grid-template-columns: 3fr 4fr;
     gap: 70px;
 }
-.about2 .about-right p {
+ .about-right p {
     color: black;
     font-size: 18px !important;
     font-weight: 300;
@@ -663,7 +654,7 @@ h1 {
     text-align: justify;
 }
 
-.about2 .about-right {
+.about-right {
     padding: 15px 0 0px 0;
 }
 
@@ -675,11 +666,24 @@ h1 {
 .about-center > img:nth-child(1){
     margin-top: 20px;
     mask-image: linear-gradient(180deg, #f9f9f900 1%, #000 40%);
+
+    /* clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    transition: all 2s cubic-bezier(.215, .61, .355, 1)!important; */
+
 }
 .about-center > img:nth-child(2){
     margin-top: -20px;
     mask-image: linear-gradient(0deg, #f9f9f900 1%, #000 40%);
+
+/* 
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    transition: all 2s cubic-bezier(.215, .61, .355, 1)!important; */
 }
+/* .about-center > img[data-aos^=fade][data-aos^=fade].aos-animate{
+
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+} */
+
 .about {
     overflow: hidden;
 }
@@ -706,59 +710,24 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 25px;
-    background: var(--main-color3);
-    padding: 70px 150px;
     justify-content: center;
     height: 100%;
 
 
 }
 
-.services .about-right {
-
-    background: rgba(208, 221, 220, 1);
-
-}
 
 
 
 
-.about-right h4:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0px;
-    height: 2px;
-    width: 100%;
-    background-color: var(--main-color2);
-    max-width: 120px;
-}
 
-.about-right h4.no-underline:before {
-    display: none;
-}
+
+
 
 .about-right .button-site {
     width: fit-content;
 }
 
-.about-right p {
-    color: white;
-    line-height: 24px;
-}
-
-.feature-box {
-    display: flex;
-    align-items: flex-start;
-    gap: 18px;
-    padding: 22px 0;
-    border-bottom: 1px solid #0fa3b1;
-    color: white;
-}
-
-.feature-box:last-child {
-    border: none;
-}
 
 .site-logo {
     max-width: 200px;
@@ -780,12 +749,7 @@ h1 {
     width: 100%;
 }
 
-.feature-box h5 {
-    color: white;
-    /* margin-bottom: 10px; */
-    font-size: 20px;
-    line-height: 28px;
-}
+
 
 /* overview start */
 
@@ -1938,13 +1902,7 @@ label {
 }
 
 
-@media(max-width: 1600px) {
-    .about-right {
-        padding: 70px 110px;
-    }
 
-
-}
 
 @media(max-width: 1400px) {
    
@@ -1956,20 +1914,6 @@ label {
 
 }
 
-@media(max-width: 1200px) {
-
-
-
-
-
-
-    .about-right {
-        padding: 100px 50px;
-    }
-
-
-
-}
 
 @media(max-width: 1080px) {
     .connectivity {
@@ -2186,9 +2130,6 @@ label {
     }
 
 
-    .about2 .about-left {
-        display: none;
-    }
 
     .location-header {
         display: flex;
@@ -2206,17 +2147,13 @@ label {
 
 
 
-    .about-main .about-right {
-        padding-right: 20px;
-    }
-
 
 
 
 }
 
 @media(max-width: 768px) {
-    .about2 .about-right p {
+    .about-right p {
 
         font-size: 14px !important;
     }
@@ -2353,7 +2290,7 @@ label {
 
 
     .services-start,
-    .about2,
+    .about,
     .payment,
     .ameninties,
     .why-invest,
@@ -2367,7 +2304,7 @@ label {
 
 
 
-    .about2 .about-right {
+    .about-right {
         padding: 0;
     }
 
@@ -2496,7 +2433,7 @@ label {
     .payment,
     .master-plan,
     .services-start,
-    .about2,
+    .about,
     .ameninties,
     .why-invest,
     .policy {
@@ -2718,11 +2655,6 @@ label {
 
     .plan-intro {
         margin-bottom: 30px;
-    }
-
-    .feature-box h5 {
-        font-size: 18px;
-        line-height: 26px;
     }
 
     .button-site h6 {
