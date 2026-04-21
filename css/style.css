@@ -864,6 +864,7 @@ align-items: center;
     grid-template-columns: 1fr 1fr;
     gap:30px;
     margin: auto;
+    max-width: 1250px;
 }
 .property-card {
     padding: 20px;
@@ -873,6 +874,7 @@ align-items: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    align-items: center;
 
 }
 
@@ -902,8 +904,8 @@ align-items: center;
 }
 
 .property-card-head h5 {
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 22px;
+    line-height: 30px;
 }
 
 
@@ -916,7 +918,7 @@ align-items: center;
 }
 .property-card-body{
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr;
     gap: 10px ;
 }
 .property-features {
@@ -949,11 +951,11 @@ align-items: center;
 }
 .property-features h6:nth-child(1){
     color: gray;
-    font-size: 12px;
+    font-size: 15px;
     text-align: left;
 }
 .property-features h6 img {
-    width: 22px;
+    width: 26px;
 }
 
 .property-features-rate {
