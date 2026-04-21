@@ -241,7 +241,7 @@ header {
 .download {
     position: fixed;
     left: -70px;
-    top: 40%;
+    top: 35%;
     transform: rotate(90deg) translateY(-50%);
     transform-origin: center left;
     
@@ -458,7 +458,7 @@ section:nth-child(odd){
     width: 100%;
     height: 100%;
     z-index: 9;
-    background: radial-gradient(#00000074,  #ffffff00);
+    background: radial-gradient(#00000083,  #ffffff03);
 }
 
 .home .carousel-inner3:before {
@@ -551,11 +551,13 @@ h1 {
 
 .home .carousel-caption h1 {
     color: white;
-    font-size: 84px;
-    line-height: 80px;
+    font-size: 80px;
+    line-height: 74px;
     font-weight: 700;
     max-width: 800px;
     margin: auto;
+    margin-top: 20px;
+    text-transform: capitalize;
 }
 .location-badge{
     display: flex;
@@ -631,7 +633,7 @@ h1 {
 
 
 .about {
-    padding: 50px 50px 130px 50px;
+    padding: 80px 50px 130px 50px;
 }
 
 
@@ -951,7 +953,7 @@ align-items: center;
 }
 .property-features h6:nth-child(1){
     color: gray;
-    font-size: 15px;
+    font-size: 17px;
     text-align: left;
 }
 .property-features h6 img {
@@ -1554,13 +1556,7 @@ align-items: center;
     gap: 10px;
 }
 
-.second-footer .nav2 {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    gap: 25px;
-}
+
 
 
 
@@ -1568,8 +1564,11 @@ align-items: center;
     color: white !important;
     display: inline-flex;
     gap: 6px;
+    padding-bottom: 2px;
 }
-
+.second-footer .contact-number a i{
+margin-top: 5px;
+}
 .footer .second-footer h6 {
     color: white;
     line-height: 22px;
