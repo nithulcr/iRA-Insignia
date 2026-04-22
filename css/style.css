@@ -778,6 +778,8 @@ h1 {
 .overview-bg img {
     width: 100%;
     display: block;
+    min-height: 240px;
+    object-fit: cover;
 }
 
 .overview-content {
@@ -1461,7 +1463,7 @@ align-items: center;
 /* footer start */
 .footer {
     background-color: var(--main-color3);
-    padding: 110px;
+    padding: 80px 50px 110px 50px;
 }
 
 .first-footer {
@@ -1470,7 +1472,7 @@ align-items: center;
     flex-direction: column;
     border-bottom: 1px solid #FFFFFF30;
     justify-content: center;
-    padding: 50px 0px 30px 0px;
+    padding: 0px 0px 30px 0px;
     flex-wrap: wrap;
     width: 100%;
 }
@@ -1936,43 +1938,38 @@ label {
         padding-left: 50px;
         padding-right: 50px;
     }
+    .fixed-contact {
+
+    bottom: 100px;
 
 }
 
+}
 
+@media(max-width: 1200px) {
+    .sticky-bar .features-column .button-site {
+   width: 100%;
+   min-width: 100%;
+}
+.about-row, .master-plan-row {
+
+    gap: 40px;
+}
+
+.second-footer {
+    grid-template-columns: 1fr 1fr;
+}
+.footer-column:nth-child(2) {
+   border-right: none;
+}
+.footer-column:nth-child(-n+2) {
+    border-bottom: 1px solid #FFFFFF24;
+}
+}
 @media(max-width: 1080px) {
-    .connectivity {
-        flex-direction: column;
-    }
-.overview-content-heading{
-    color: white;
-}
-    .overview-content,
-    .overview-content2 {
-        position: relative;
-        padding: 20px;
+    
 
-    }
 
-    .overview-section>div {
-        position: relative;
-        background: var(--main-color3);
-        display: flex;
-        flex-direction: column;
-        padding-bottom: 30px;
-    }
-
-    .overview-bg {
-        order: 0;
-    }
-
-    .overview-content {
-        order: 1;
-    }
-
-    .overview-content2 {
-        order: 2;
-    }
 
     .plan-cards>*:not(:last-child) {
         border: none;
@@ -1989,87 +1986,11 @@ label {
     .center-card {
         display: none !important;
     }
-}
-
-@media(max-width: 990px) {
-
-    .overview-content-sec,
-    .overview-content-sec2 {
-        max-width: 100%;
-    }
-
-    .features2 h6 {
-        font-size: 14px;
-    }
-
-    .features .features-column img {
-        max-width: 120px;
-    }
-
-    .center-card {
-        order: -1;
-        margin-bottom: 20px;
-    }
-
-    .amenities-list {
-
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .amenities-list li:nth-child(4n) {
-        border-bottom: 1px solid #2d2d2dac;
-        border-right: 1px solid #2d2d2dac;
-    }
-
-    .amenities-list li:nth-child(9) {
-        border-bottom: 1px solid #2d2d2dac;
-    }
-
-    .amenities-list li:nth-child(3n) {
-        border-right: none;
-        text-align: left;
-    }
-
-    .amenities-list li:nth-last-child(-n+3) {
-        border-bottom: none;
-    }
-
-    .amenities-list li:nth-child(1),
-    .amenities-list li:nth-child(4),
-    .amenities-list li:nth-child(7),
-    .amenities-list li:nth-child(10) {
-        text-align: right;
-    }
-
-    .amenities-list li:nth-child(5),
-    .amenities-list li:nth-child(8) {
-        text-align: center;
-    }
-
-    .plan-cards {
-        gap: 18px;
-    }
-
-    .payment-plan-modern {
-        padding: 32px 8px;
-        border-radius: 20px;
-    }
-
-    .plan-card {
-        min-width: 140px;
-        align-items: flex-start;
-    }
-
-
-    .amenities-bg {
-        padding: 16px;
-    }
-
     .header-right {
 
         gap: 40px;
         padding-right: 30px;
-        margin-right: 50px;
+
     }
 
     .logo img {
@@ -2135,6 +2056,114 @@ label {
         transform: translate(0%, -6px) rotate(-45deg);
         transition: .3s;
     }
+}
+
+@media(max-width: 990px) {
+    .master-plan-row {
+
+    grid-template-columns: 1fr;
+
+}
+.property-card-head h5 {
+    font-size: 22px;
+    line-height: 22px;
+}
+    .connectivity {
+        flex-direction: column;
+    }
+    .connectivity-img {
+    position: relative;
+    top: auto;
+}
+.connectivity-img img {
+    margin: auto;
+    display: flex;
+}
+.property-card, .property-card:nth-child(even) {
+
+    flex-direction: column;
+
+}
+.property-card > div {
+    width: 100%;
+}
+    .overview-content-sec,
+    .overview-content-sec2 {
+        max-width: 100%;
+    }
+
+    .features2 h6 {
+        font-size: 14px;
+    }
+
+    .features .features-column img {
+        max-width: 120px;
+    }
+
+    .center-card {
+        order: -1;
+        margin-bottom: 20px;
+    }
+
+    .amenities-list {
+
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .amenities-list li:nth-child(4n) {
+        border-bottom: 1px solid #2d2d2dac;
+        border-right: 1px solid #2d2d2dac;
+    }
+
+    .amenities-list li:nth-child(9) {
+        border-bottom: 1px solid #2d2d2dac;
+    }
+
+    .amenities-list li:nth-child(3n) {
+        border-right: none;
+        text-align: left;
+    }
+
+    .amenities-list li:nth-last-child(-n+3) {
+        border-bottom: none;
+    }
+
+    .amenities-list li:nth-child(1),
+    .amenities-list li:nth-child(4),
+    .amenities-list li:nth-child(7),
+    .amenities-list li:nth-child(10), .amenities-list li:nth-child(16) {
+        text-align: right;
+    }
+
+    .amenities-list li:nth-child(5),
+    .amenities-list li:nth-child(8) {
+        text-align: center;
+    }
+
+    .plan-cards {
+        gap: 18px;
+    }
+
+    .payment-plan-modern {
+        padding: 32px 8px;
+        border-radius: 20px;
+    }
+
+    .plan-card {
+        min-width: 140px;
+        align-items: flex-start;
+    }
+
+
+    .amenities-bg {
+        padding: 16px;
+    }
+.about-row {
+
+    grid-template-columns: 1fr;
+
+}
+    
 
     .features2 h5 {
         font-size: 18px;
@@ -2157,14 +2186,20 @@ label {
 
 
     .location-header {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        align-items: start;
+
         margin-bottom: 30px;
     }
 
+.contact-row {
+    grid-template-columns: 1fr 1fr;
+}
+.contact-column {
 
+    display: flex;
+    text-align: left;
+    gap: 14px;
+    padding: 20px;
+}
     .amenities-row {
         grid-template-columns: 1fr 1fr 1fr;
 
@@ -2254,8 +2289,8 @@ label {
     .home .carousel-caption h1,
     h1 {
 
-        font-size: 44px;
-        line-height: 50px;
+        font-size: 40px;
+        line-height: 40px;
 
     }
 
@@ -2336,8 +2371,8 @@ label {
     .third-footer {
         text-align: left;
         /* justify-content: center; */
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
     .plan-card .plan-value {
@@ -2350,12 +2385,24 @@ label {
 
 @media(max-width: 580px) {
 
-
+    .second-footer {
+        grid-template-columns: 1fr;
+    }
     .footer-column:first-child {
         border-right: none !important;
     }
-
-
+.amenities-list {
+        grid-template-columns: 1fr 1fr;
+    }
+    .amenities-list{
+        gap: 10px;
+    }
+.amenities-list li{
+    border: none!important;
+    background: white;
+    padding: 5px;
+    border-radius: 10px;
+}
 
     .newste-icon {
         padding: 50px 20px;
@@ -2385,11 +2432,19 @@ label {
         transform: translateX(-50%);
 
     }
+        .contact-row {
+        grid-template-columns: 1fr;
+    }
 
 }
 
 @media(max-width: 520px) {
-
+.about-center > img:nth-child(1){
+    display: none;
+}
+.about-center{
+    grid-template-columns: 1fr;
+}
 
     .only-desk {
         display: none;
@@ -2461,11 +2516,17 @@ label {
     .about,
     .ameninties,
     .why-invest,
-    .policy {
+    .policy,
+    .contact {
 
         padding: 50px 20px;
     }
-
+ .footer{
+    padding: 50px 20px 100px 20px;
+ }
+ .footer-column{
+    padding: 20px 0;
+ }
     .features2 {
         padding: 20px;
     }
@@ -2495,9 +2556,6 @@ label {
         bottom: -80px;
     }
 
-    .footer-column {
-        padding: 20px;
-    }
 
 
 
