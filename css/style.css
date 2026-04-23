@@ -441,7 +441,19 @@ section:nth-child(odd){
     position: relative;
     /* mask-image: linear-gradient(0deg, #f9f9f900 6%, #000 35%); */
 }
+.carousel-caption h4{
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+.carousel-caption h4 img{
+    width: 16px;
+}
 .home .carousel-inner2 img {
     /* height: calc(100vh - 75px); */
     height: 105vh;
@@ -458,7 +470,7 @@ section:nth-child(odd){
     width: 100%;
     height: 100%;
     z-index: 9;
-    background: radial-gradient(#00000083,  #ffffff03);
+    background: radial-gradient(#0000009f, #00000064, #ffffff03);
 }
 
 .home .carousel-inner3:before {
@@ -556,8 +568,8 @@ h1 {
     font-weight: 700;
     max-width: 800px;
     margin: auto;
-    margin-top: 20px;
     text-transform: capitalize;
+    margin-top: 20px;
 }
 .location-badge{
     display: flex;
@@ -1168,9 +1180,7 @@ align-items: center;
 
 }
 
-.connectivity-img img {
-    filter: brightness(.94);
-}
+
 
 .newst-city-col h5 {
     font-weight: 400;
@@ -1183,7 +1193,20 @@ align-items: center;
     width: 45px;
     filter: brightness(0.4);
 }
+.newst-city-col-icon{
+    width: 50px;
+    height: 50px;
+    background: var(--main-color2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    opacity: .7;
 
+}
+.newst-city-col i {
+    color: white;
+}
 
 
 
@@ -1193,7 +1216,7 @@ align-items: center;
 
 /* payment start */
 .payment {
-    padding: 100px 50px;
+    padding: 0 0 60px 0px;
     padding-top: 0;
 }
 
@@ -1213,18 +1236,15 @@ align-items: center;
 }
 
 .plan-cards {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;
-
-
     align-items: center;
-    gap: 40px;
-    max-width: 1200px;
+    gap: 0px;
     margin: 0 auto;
     background: var(--main-color);
     border-radius: 20px;
-    padding: 35px;
+    padding: 30px;
     align-items: normal;
 
 }
@@ -1242,26 +1262,30 @@ align-items: center;
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 5px;
     flex: auto;
     height: auto;
     justify-content: center;
+    align-items: center;
+    padding: 26px;
+    text-align: center;
 
 
 }
 
 
 
-.plan-icon img {
-    width: 50px;
+.plan-card img {
+    /* width: 50px; */
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 15px;
 }
 
 
 .plan-card .plan-value {
-    font-size: 40px;
-    line-height: 42px;
-    text-align: left;
-    white-space: nowrap;
+    font-size: 26px;
+    line-height: 32px;
 }
 
 .plan-card .plan-value.plan-value2 {
@@ -1271,11 +1295,10 @@ align-items: center;
 }
 
 .plan-desc {
-    text-align: left;
-    margin-top: 10px;
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 14px;
+    line-height: 20px;
     opacity: .8;
+    font-weight: 300;
 }
 
 .plan-card-bottom {
@@ -1954,6 +1977,13 @@ label {
 }
 
 @media(max-width: 1200px) {
+    .plan-cards{
+        grid-template-columns: 1fr 1fr;
+    }
+        .plan-cards>* {
+        border-bottom: 2px solid #e3e3e357;
+        padding-bottom: 20px;
+    }
     .sticky-bar .features-column .button-site {
    width: 100%;
    min-width: 100%;
@@ -2157,10 +2187,7 @@ label {
         border-radius: 20px;
     }
 
-    .plan-card {
-        min-width: 140px;
-        align-items: flex-start;
-    }
+
 
 
     .amenities-bg {
@@ -2359,7 +2386,6 @@ label {
 
     .services-start,
     .about,
-    .payment,
     .ameninties,
     .why-invest,
     .policy {
@@ -2384,14 +2410,17 @@ label {
     }
 
     .plan-card .plan-value {
-        font-size: 26px;
-        line-height: 30px;
+        font-size: 22px;
+        line-height: 26px;
     }
 
 
 }
 
 @media(max-width: 580px) {
+    .badge-star img {
+    width: 26px;
+}
 .download {
   
     left: -70px;
@@ -2527,7 +2556,6 @@ border-radius: 14px 14px 0 0;
     }
 
     .about-right,
-    .payment,
     .master-plan,
     .services-start,
     .about,
@@ -2619,7 +2647,9 @@ border-radius: 14px 14px 0 0;
     }
 
 
-
+    .plan-cards{
+        grid-template-columns: 1fr;
+    }
 
 
 }
@@ -2713,14 +2743,8 @@ border-radius: 14px 14px 0 0;
 
     }
 
-    .plan-card {
-        display: flex;
-        gap: 22px;
-    }
 
-    .plan-card .plan-value {
-        line-height: 40px;
-    }
+
 
     .modal-content {
 
